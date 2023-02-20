@@ -1,0 +1,35 @@
+<div class="container">
+  <table class="table table-bordered backdrop">
+    <thead>
+      <tr>
+        <th>Index</th>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Salary</th>
+        <th>Joining Date</th>
+        <th>Insurance</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of employees; let i = index">
+        <td>{{ i }}</td>
+        <td>{{ e.employeeID }}</td>
+        <td>{{ e.emplyeeName }}</td>
+        <td>{{ e.employeeAge }}</td>
+        <td>{{ e.employeeGender | uppercase }}</td>
+        <td>{{ e.employeeSalary | currency }}</td>
+        <td>{{ e.joiningDate | date : "short" }}</td>
+        <td>{{ e.insurance }}</td>
+        <td>{{ e.employeeAddress }}</td>
+        <!-- <td>
+          <button class="btn btn-primary" (click)="selectRoom(room)">
+            Select
+          </button>
+        </td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
